@@ -9,23 +9,32 @@ align-content: center;
 header {
     width: 100%;
     margin: 0;
+    height: 170px;
     padding-top: 3%;
     padding-bottom: 3%;
     font-family: 'crimson text';
-    background-image: url('https://images.freecreatives.com/wp-content/uploads/2016/02/Blue-Pattern-Background-For-Free-Download.jpg');
+    background-image: url('nytbanner.jpeg');
 }
 h1 {
     font-weight: bold;
+    background: black;
+    width: 320px;
     color: snow;
+    border-radius: 10px;
     text-align: center;
-    font-size: 30rem;
+    font-size: 36px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #formStyling input {
     align-content: center;
     margin-left: 50%;
 }
-#submit {
-    border: solid blue 1px;
+#submit,
+#clear {
+    border: solid black 1px;
 }
 h3 {
    padding-top: 2%; 
@@ -34,6 +43,54 @@ h3 {
    width: 950px;
 }
 
-#clear {
-    border: solid red 1px;
+#submit:hover,
+#clear:hover {
+    background: black;
+    color: white;
 }
+
+.wordStyling {
+    font-size: 18px;
+}
+
+#endYearPadding {
+    padding-top: 20px;
+}
+
+a:hover {
+    color: #473e3e;
+    text-decoration: none; 
+}
+
+.articleHead {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.articleHead::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    color: #473e3e;
+    background-color: #473e3e;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.articleHead:hover::after {
+    transform: scaleX(1);
+    color: #473e3e;
+    transform-origin: bottom left;
+}
+
+.article {
+    margin-left: 15px;
+}
+
